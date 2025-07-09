@@ -1,2 +1,2 @@
 # verfessbot
-Testing project for Neimark
+Testing project for Neimark and HSE
