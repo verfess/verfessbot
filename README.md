@@ -15,5 +15,7 @@ Testing project for Neimark and HSE
 
 ## Сборка проекта
 
-pip install -r requirements.txt
-TG_TOKEN=xxx python main.py
+```shell
+$ pip install -r requirements.txt
+$ TG_TOKEN=xxx python main.py
+```
