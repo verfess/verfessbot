@@ -12,3 +12,8 @@ Testing project for Neimark and HSE
 Школьник фотографирует необходимый для изучения текст
 (разворот учебника), бот представляет краткую выжимку
 этого текста, которую можно выучить за минуту.
+
+## Сборка проекта
+
+pip install -r requirements.txt
+TG_TOKEN=xxx python main.py
