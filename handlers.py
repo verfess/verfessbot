@@ -4,6 +4,10 @@ from aiogram.filters import CommandStart, Command
 from os import environ, remove
 import tempfile
 from yandexservices import picture_to_text, text_to_summary_text
+from dotenv import load_dotenv
+
+
+load_dotenv()  # take environment variables
 
 router = Router()
 tg_token = environ.get('TG_TOKEN')

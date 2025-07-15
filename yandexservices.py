@@ -1,6 +1,10 @@
 import requests
 import base64
 from os import environ
+from dotenv import load_dotenv
+
+
+load_dotenv()  # take environment variables
 
 x_folder_id = environ.get('YANDEX_FOLDER_ID')
 api_key = environ.get('YANDEX_API_KEY')
@@ -36,7 +40,7 @@ def picture_to_text(file_path: str):
     )
 
     answer = resp.json()
-    # print(answer)
+    print(answer)
     return answer['result']['textAnnotation']['fullText']
 
 
@@ -78,7 +82,7 @@ def text_to_summary_text(text):
     )
 
     answer = resp.json()
-    # print(answer)
+    print(answer)
     try:
         reply_txt = answer['result']['alternatives'][0]['message']['text']
         return reply_txt

@@ -15,7 +15,16 @@ Testing project for Neimark and HSE
 
 ## Сборка проекта
 
+Требуется python версии >= 3.9
+
 ```shell
-$ pip install -r requirements.txt
-$ TG_TOKEN=xxx python main.py
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ pip3 install -r requirements.txt
+```
+
+Создать локальный .env файл и прописать в нем TG_TOKEN, YANDEX_API_KEY, YANDEX_FOLDER_ID
+
+```shell
+$ python3 main.py
 ```
