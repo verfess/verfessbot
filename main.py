@@ -1,14 +1,12 @@
 import asyncio
-from aiogram import Bot, Dispatcher
-from os import environ
+from aiogram import Dispatcher
+from aiogram.fsm.storage.memory import MemoryStorage
 
-from handlers import router
+from handlers import router, bot
 
 
 async def main():
-    tg_token = environ.get('TG_TOKEN')
-    bot = Bot(token=tg_token)
-    dp = Dispatcher()
+    dp = Dispatcher(storage=MemoryStorage())
     dp.include_router(router)
     await dp.start_polling(bot)
 
